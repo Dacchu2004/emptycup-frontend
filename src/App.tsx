@@ -11,7 +11,7 @@ function App() {
   const [shortlisted, setShortlisted] = useState(false);
 
   useEffect(() => {
-    fetch('https://emptycup-backend-nhwx.onrender.com/api/designers:5000/api/designers')
+    fetch('https://emptycup-backend-nhwx.onrender.com/api/designers')
       .then((res) => res.json())
       .then((data) => setDesigners(data))
       .catch((err) => console.error('Failed to fetch designers:', err));
