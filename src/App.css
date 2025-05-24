@@ -1,0 +1,128 @@
+/* File: src/App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFF9F1;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #FFF9F1;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  color: #333;
+}
+
+.menu {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background-color: #FFF9F1;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.navbar div {
+  cursor: pointer;
+  color: #4B2E2E;
+}
+
+.cards {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF5E9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-left {
+  width: 75%;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card-stars {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: #F4B400;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+.card-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.card-metrics div {
+  text-align: center;
+}
+
+.card-phones {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #222;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  color: #AA3300;
+}
+
+.card-right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  color: inherit;
+}
+
+.card-right button.shortlisted {
+  color: red;
+  font-weight: bold;
+}
