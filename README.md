@@ -1,54 +1,98 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# EmptyCup Full Stack Assignment
 
-Currently, two official plugins are available:
+This is a full-stack web application built as part of the EmptyCup Full Stack Assignment. It replicates a mobile-friendly designer portfolio listing from a Figma design, featuring dynamic shortlisting, API integration, and full deployment using Docker, Netlify, and Render.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend:
+- React (with Vite)
+- TypeScript
+- Tailwind CSS
+- Font Awesome
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Backend:
+- Flask (Python 3)
+- Flask-CORS
+- JSON-based mock data
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Deployment:
+- Frontend: Netlify
+- Backend: Render
+- Local Dev: Docker & Docker Compose
+
+---
+
+## 📁 Project Structure
+
+```
+EmptyCup/
+├── frontend/          # React + Vite app
+│   ├── src/
+│   ├── public/
+│   └── Dockerfile
+├── backend/           # Flask API
+│   ├── app.py
+│   ├── data.json
+│   └── Dockerfile
+├── docker-compose.yml
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started (Locally)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 1. Clone the Repositories
+
+```bash
+git clone https://github.com/Dacchu2004/emptycup-frontend.git
+git clone https://github.com/Dacchu2004/emptycup-backend.git
 ```
+
+Place both folders inside a parent folder named `EmptyCup`.
+
+### 2. Run with Docker Compose
+
+Make sure Docker is installed, then run:
+
+```bash
+cd EmptyCup
+docker compose up --build
+```
+
+- Frontend: http://localhost:5173  
+- Backend API: http://localhost:5000/api/designers
+
+---
+
+## 🌐 Deployment Links
+
+- 🔗 **Frontend (Netlify)**: [https://your-netlify-site.netlify.app](#)
+- 🔗 **Backend (Render)**: [https://your-backend.onrender.com/api/designers](#)
+
+Replace these with your actual live URLs.
+
+---
+
+## 🧪 Features
+
+- Mobile-optimized UI replicating Figma design
+- List of designers displayed dynamically
+- Shortlisting functionality using React state
+- Backend API serves data from JSON
+- Dockerized deployment setup
+
+---
+
+## 📜 API Endpoint
+
+- `GET /api/designers`  
+  Returns a list of designer objects from `data.json`.
+
+---
+
+## 📄 Author
+
+- Name: Dharshan S  
+- Email: dharshans.2429@gmail.com
